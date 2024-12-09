@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Art Gallery</title>
+ <link rel="stylesheet" href="css/style.css">
+ <script src="script.js"></script>
+</head>
+<body>
+ <header>
+ <h1>Art Gallery</h1>
+ <img src="logo.jpeg" alt="Art Gallery">
+ </header>
+ <nav>
+ <a href="index.html">Home</a>
+ <a href="Registration.html">Registration</a>
+ <a href="contact.html">Contact</a>
+ </nav>
+ <main>
+    <section class="welcome-banner">
+        <img src="bg01.png" alt="Art Gallery" class="img-fluid">
+        <div class="welcome-banner-text">
+            <p>Welcome to Art Gallery</p>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2>Gallery Listings</h2>
+            <form id="artSearchForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name of pictures:</label>
+                    <input type="text" id="name" name="name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="format" class="form-label">Format:</label>
+                    <select id="format" name="format" class="form-select">
+                        <option value="">All Industries</option>
+                        <option value="JPG">JPG</option>
+                        <option value="PNG">PNG</option>
+                        <option value="GIFS">GIFS</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location:</label>
+                    <input type="text" id="location" name="location" class="form-control">
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="filterarts()">Search</button>
+                <button type="button" class="btn btn-danger" onclick="clearFilters()">Clear</button>
+            </form>
+    
+            <table id="artsListingsTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Format</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody id="artListingsBody">
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <footer class="text-center py-4">
+        <p>Contact us at: info@artgallery.com</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+ </main>
+ <footer>
+ <p>Contact us: art@example.com | Follow us on Social Media</p>
+ </footer>
+</body>
+</html>
